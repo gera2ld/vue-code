@@ -8,6 +8,9 @@
 </head>
 <body>
   <div id="app">
+    <select v-model="mode">
+      <option v-for="mode in modes" v-text="mode"></option>
+    </select>
     <vue-code :code="code" :options="options" @changed="onUpdate"></vue-code>
     <pre class="echo" v-text="code"></pre>
   </div>

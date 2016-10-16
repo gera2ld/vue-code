@@ -13,6 +13,18 @@ var Code = {
   },
   watch: {
     code: 'update',
+    options: function (options, oldOptions) {
+      var _this = this;
+      if (!_this.cm) return;
+      var diff = {};
+      Object.keys(options).concat(Object.keys(oldOptions))
+      .forEach(function (key) {
+        if (options[key] !== oldOptions[key]) diff[key] = options[key];
+      });
+      Object.keys(diff).forEach(function (key) {
+        _this.cm.setOption(key, diff[key]);
+      });
+    },
   },
   methods: {
     update: function (code) {
