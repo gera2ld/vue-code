@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Code Editor</title>
+  <link rel="stylesheet" href="../node_modules/codemirror/lib/codemirror.css">
+  <script src="../node_modules/systemjs/dist/system.js"></script>
+</head>
+<body>
+  <div id="app">
+    <vue-code :code="code" :options="options" @changed="onUpdate"></vue-code>
+    <pre class="echo" v-text="code"></pre>
+  </div>
+  <script>
+    System.config({
+      map: {
+        vue: '../node_modules/vue',
+        codemirror: '../node_modules/codemirror',
+        'vue-code': '..',
+      },
+      packages: {
+        vue: {main: 'dist/vue.js'},
+        codemirror: {main: 'lib/codemirror.js'},
+        'vue-code': {main: 'index.js'},
+      },
+    });
+    System.import('./app.js');
+  </script>
+</body>
+</html>

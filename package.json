@@ -1,0 +1,23 @@
+{
+  "name": "vue-code",
+  "version": "0.0.0",
+  "description": "Code editor based on Vue.js and CodeMirror",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vue",
+    "code",
+    "codemirror"
+  ],
+  "author": "Gerald <i@gerald.top>",
+  "license": "ISC",
+  "dependencies": {
+    "codemirror": "^5.19.0",
+    "vue": "^2.0.3"
+  },
+  "devDependencies": {
+    "systemjs": "^0.19.39"
+  }
+}
