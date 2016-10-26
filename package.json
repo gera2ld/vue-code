@@ -13,11 +13,14 @@
   ],
   "author": "Gerald <i@gerald.top>",
   "license": "ISC",
-  "dependencies": {
-    "codemirror": "^5.19.0",
-    "vue": "^2.0.3"
-  },
   "devDependencies": {
-    "systemjs": "^0.19.39"
+    "systemjs": "^0.19.39",
+    "vue": "2"
+  },
+  "peerDependencies": {
+    "vue": "2"
+  },
+  "dependencies": {
+    "codemirror": "^5.20.2"
   }
 }
