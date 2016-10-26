@@ -2,7 +2,7 @@ vue-code
 ===
 
 ![NPM](https://img.shields.io/npm/v/vue-code.svg)
-![Licence](https://img.shields.io/npm/l/vue-code.svg)
+![License](https://img.shields.io/npm/l/vue-code.svg)
 ![Downloads](https://img.shields.io/npm/dt/vue-code.svg)
 
 A code editor based on Vue.js and CodeMirror.
@@ -45,3 +45,7 @@ new Vue({
   },
 });
 ```
+
+Snapshots
+---
+![](snapshot.png)
