@@ -13,7 +13,7 @@ Installation
 $ npm i vue-code
 ```
 
-Usage
+Demo
 ---
 ``` html
 <vue-code :code="code" :options="options" @changed="onUpdate"></vue-code>
@@ -45,6 +45,28 @@ new Vue({
   },
 });
 ```
+
+For more detailed usage, please see [demo](demo).
+
+Document
+---
+* `<vue-code>`
+
+  * props:
+
+    * `code`
+
+      The initial code.
+
+    * `options`
+
+      An object to be passed directly to CodeMirror.
+
+  * events:
+
+    * `changed`
+
+      Emitted when code is changed, the only parameter is the changed `code`.
 
 Snapshots
 ---
