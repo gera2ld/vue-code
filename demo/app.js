@@ -39,9 +39,4 @@ Test \`markdown\`.`,
   components: {
     VueCode,
   },
-  methods: {
-    onUpdate(value) {
-      this.code = value;
-    },
-  },
 });

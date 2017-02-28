@@ -11,7 +11,7 @@
     <select v-model="mode">
       <option v-for="mode in modes" v-text="mode"></option>
     </select>
-    <vue-code :code="code" :options="options" @changed="onUpdate"></vue-code>
+    <vue-code v-model="code" :options="options"></vue-code>
     <pre class="echo" v-text="code"></pre>
   </div>
   <script>
@@ -19,12 +19,11 @@
       map: {
         vue: '../node_modules/vue',
         codemirror: '../node_modules/codemirror',
-        'vue-code': '..',
+        'vue-code': '../lib/index.js',
       },
       packages: {
         vue: {main: 'dist/vue.js'},
         codemirror: {main: 'lib/codemirror.js'},
-        'vue-code': {main: 'index.js'},
       },
     });
     System.import('./app.js');

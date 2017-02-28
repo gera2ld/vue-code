@@ -13,10 +13,10 @@ Installation
 $ npm i vue-code
 ```
 
-Demo
+Usage
 ---
 ``` html
-<vue-code :code="code" :options="options" @changed="onUpdate"></vue-code>
+<vue-code v-model="code" :options="options"></vue-code>
 ```
 
 ``` js
@@ -38,11 +38,6 @@ new Vue({
       mode: 'javascript',
     },
   },
-  methods: {
-    onUpdate(value) {
-      this.code = value;
-    },
-  },
 });
 ```
 
@@ -54,19 +49,15 @@ Document
 
   * props:
 
-    * `code`
-
-      The initial code.
-
     * `options`
 
       An object to be passed directly to CodeMirror.
 
-  * events:
+    * `value`
 
-    * `changed`
+      The value of current editor.
 
-      Emitted when code is changed, the only parameter is the changed `code`.
+  * This component is recommended to use with `v-model`.
 
 Snapshots
 ---
