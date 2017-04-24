@@ -33,6 +33,7 @@ export default Vue.extend({
   },
   mounted() {
     this.cm = CodeMirror(this.$el, Object.assign({}, defaultOptions, this.options));
+    this.$emit('ready', this.cm);
     this.cm.on('change', cm => {
       this.$emit('input', this.cached = cm.getValue());
     });
