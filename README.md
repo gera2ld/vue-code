@@ -61,4 +61,4 @@ Document
 
 Snapshots
 ---
-![](snapshot.png)
+![](demo/snapshot.png)
