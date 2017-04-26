@@ -11,7 +11,7 @@
     <select v-model="mode">
       <option v-for="mode in modes" v-text="mode"></option>
     </select>
-    <vue-code v-model="code" :options="options"></vue-code>
+    <vue-code v-model="code" :options="options" @ready="onReady"></vue-code>
     <pre class="echo" v-text="code"></pre>
   </div>
   <script>

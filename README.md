@@ -16,7 +16,7 @@ $ npm i vue-code
 Usage
 ---
 ``` html
-<vue-code v-model="code" :options="options"></vue-code>
+<vue-code v-model="code" :options="options" @ready="onReady"></vue-code>
 ```
 
 ``` js
@@ -38,6 +38,11 @@ new Vue({
       mode: 'javascript',
     },
   },
+  methods: {
+    onReady(cm) {
+      console.log('Oh, you got the CodeMirror instance:', cm);
+    },
+  },
 });
 ```
 
@@ -45,19 +50,19 @@ For more detailed usage, please see [demo](demo).
 
 Document
 ---
-* `<vue-code>`
+Content is passed to the component by `v-model`.
 
-  * props:
+* Props:
 
-    * `options`
+  * `options`
 
-      An object to be passed directly to CodeMirror.
+    An object to be passed directly to CodeMirror.
 
-    * `value`
+* Events:
 
-      The value of current editor.
+  * `ready`
 
-  * This component is recommended to use with `v-model`.
+    Emitted when CodeMirror instance is ready and passed as the only argument.
 
 Snapshots
 ---

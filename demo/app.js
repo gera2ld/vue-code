@@ -39,4 +39,9 @@ Test \`markdown\`.`,
   components: {
     VueCode,
   },
+  methods: {
+    onReady(cm) {
+      console.log('CodeMirror is ready and here is the instance:', cm);
+    },
+  },
 });
