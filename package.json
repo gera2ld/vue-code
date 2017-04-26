@@ -1,6 +1,6 @@
 {
   "name": "vue-code",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Code editor based on Vue.js and CodeMirror",
   "main": "lib",
   "scripts": {
