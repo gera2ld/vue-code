@@ -1,4 +1,3 @@
-import Vue from 'vue';
 import CodeMirror from 'codemirror';
 
 const defaultOptions = {
@@ -6,23 +5,19 @@ const defaultOptions = {
   tabSize: 2,
 };
 
-export default Vue.extend({
+export default {
   props: ['value', 'options'],
-  render(h) {
-    return h('div');
-  },
+  render: h => h('div'),
   watch: {
     value: 'update',
     options(options, oldOptions) {
       const {cm} = this;
       if (!cm) return;
-      Object.keys(options)
-      .concat(Object.keys(oldOptions))
-      .forEach(key => {
+      for (const key in Object.assign({}, oldOptions, options)) {
         if (options[key] !== oldOptions[key]) {
           cm.setOption(key, options[key]);
         }
-      });
+      }
     },
   },
   methods: {
@@ -39,4 +34,4 @@ export default Vue.extend({
     });
     this.update(this.value);
   },
-});
+};
