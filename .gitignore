@@ -1,4 +1,5 @@
 node_modules
 *.log
-*.lock
+yarn.lock
+package-lock.json
 /lib

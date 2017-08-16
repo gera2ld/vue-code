@@ -6,7 +6,7 @@ export default {
   format: 'cjs',
   plugins: [babel({
     presets: [
-      ['es2015', {modules: false}],
+      ['env', { modules: false }],
     ],
     plugins: [
       'external-helpers',
@@ -14,7 +14,6 @@ export default {
     ignore: 'node_modules/**',
   })],
   external: [
-    'vue',
     'codemirror',
   ],
 };
