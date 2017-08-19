@@ -5,6 +5,8 @@ vue-code
 ![License](https://img.shields.io/npm/l/vue-code.svg)
 ![Downloads](https://img.shields.io/npm/dt/vue-code.svg)
 
+### This package is deprecated in favor of [vueleton](https://github.com/gera2ld/vueleton).
+
 A code editor based on Vue.js and CodeMirror.
 
 Installation
